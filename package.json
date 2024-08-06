@@ -1,0 +1,19 @@
+{
+  "name": "elysia-bun-flyio",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "deploy": "flyctl deploy --remote-only",
+    "start": "bun --bun index.ts",
+    "start-docker": "docker build -t elysia-bun-flyio . && docker run --rm -it -p 8080:8080 elysia-bun-flyio"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "elysia": "^1.1.5"
+  }
+}
